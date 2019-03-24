@@ -1,0 +1,16 @@
+@import './bulma.scss';
+
+section.has-heaven-bg {
+    background-image: url('/img/gods/heaven.svg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+section.has-white-bg {
+    background-color: #ffffff;
+}
+
+section.has-colored-bg {
+    background-color: #e3f6fa;
+}

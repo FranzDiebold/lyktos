@@ -1,0 +1,17 @@
+@import "../../variables";
+
+.type {
+    img {
+        height: 1rem;
+    }
+
+    .greek {
+        background-color: $greekColor;
+        color: #ffffff;
+    }
+
+    .roman {
+        background-color: $romanColor;
+        color: #ffffff;
+    }
+}

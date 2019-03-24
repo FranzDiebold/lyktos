@@ -1,0 +1,13 @@
+@import "../../variables";
+
+.god-tag {
+    .greek {
+        background-color: $greekColor;
+        color: #ffffff;
+    }
+
+    .roman {
+        background-color: $romanColor;
+        color: #ffffff;
+    }
+}
