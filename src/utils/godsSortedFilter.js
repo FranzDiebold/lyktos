@@ -31,7 +31,7 @@ function getSuitability(god, filterText) {
 
 function godsSortedFilter(godsList, filterText) {
     if (! filterText) {
-        return godsList;
+        return godsList || [];
     }
 
     return godsList
@@ -48,7 +48,7 @@ function godsSortedFilter(godsList, filterText) {
 
 function godsCounterpartsSortedFilter(godCounterparts, filterText) {
     if (! filterText) {
-        return godCounterparts;
+        return godCounterparts || [];
     }
 
     return godCounterparts
