@@ -108,10 +108,10 @@ function About() {
                                     All information is taken from <a href="https://www.wikipedia.org" target="_blank" rel="noopener noreferrer">Wikipedia</a>.
                                 </p>
                                 <p>
-                                    Gods <a href="https://www.vecteezy.com/" target="_blank" rel="noopener noreferrer">Vector Illustration by www.Vecteezy.com</a>
+                                    Gods vector illustrations by <a href="https://www.vecteezy.com/" target="_blank" rel="noopener noreferrer">www.Vecteezy.com</a>.
                                 </p>
                                 <p>
-                                    Heaven background <a href="http://www.freepik.com" target="_blank" rel="noopener noreferrer">Designed by macrovector / Freepik</a>
+                                    Heaven background designed by <a href="http://www.freepik.com" target="_blank" rel="noopener noreferrer">macrovector / Freepik</a>.
                                 </p>
                                 <p>
                                     <a href="https://bulma.io" target="_blank" rel="noopener noreferrer">
