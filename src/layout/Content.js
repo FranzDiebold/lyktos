@@ -12,13 +12,14 @@ import NotFound from '../pages/NotFound';
 import GodPropType from '../utils/GodPropType';
 
 function Content(props) {
-    const { godsData, filterText } = props;
+    const { godsData, isLoading, filterText } = props;
 
     return (
         <Switch>
             <Route exact path="/" render={() => <Redirect to="/compare" />} />
             <Route exact path="/compare" render={() => <CompareGods
                     godCounterparts={godsData.godCounterparts}
+                    isLoading={isLoading}
                     filterText={filterText}
                     godsMap={godsData.godsMap}
                 />}
@@ -26,6 +27,7 @@ function Content(props) {
             <Route exact path="/greek" render={() => <GodsList
                     type="greek"
                     godsList={godsData.greekGods}
+                    isLoading={isLoading}
                     filterText={filterText}
                     godsMap={godsData.godsMap}
                 />}
@@ -33,12 +35,18 @@ function Content(props) {
             <Route exact path="/roman" render={() => <GodsList
                     type="roman"
                     godsList={godsData.romanGods}
+                    isLoading={isLoading}
                     filterText={filterText}
                     godsMap={godsData.godsMap}
                 />}
             />
             <Route exact path="/(greek|roman)/:name([a-z-]+)"
-                   render={({ match }) => <GodDetail name={match.params.name} godsMap={godsData.godsMap} />} />
+                    render={({ match }) => <GodDetail
+                        name={match.params.name}
+                        godsMap={godsData.godsMap}
+                        isLoading={isLoading}
+                    />}
+            />
 
             <Route exact path="/about" component={About} />
 
@@ -57,19 +65,9 @@ Content.propTypes = {
         godsMap: PropTypes.objectOf(GodPropType),
         greekGods: PropTypes.arrayOf(GodPropType),
         romanGods: PropTypes.arrayOf(GodPropType),
-    }),
-    filterText: PropTypes.string,
-};
-
-Content.defaultProps = {
-    godsData: {
-        godsList: [],
-        godCounterparts: [],
-        godsMap: {},
-        greekGods: [],
-        romanGods: [],
-    },
-    filterText: '',
+    }).isRequired,
+    isLoading: PropTypes.bool.isRequired,
+    filterText: PropTypes.string.isRequired,
 };
 
 export default Content;

@@ -1,0 +1,32 @@
+$color: #25b0cd;
+$size: 62px;
+
+.loading-spinner {
+    margin: 6rem 0;
+    display: inline-block;
+    width: $size;
+    height: $size;
+
+    &:after {
+        content: " ";
+        display: block;
+        width: $size;
+        height: $size;
+        margin: 1px;
+        border-radius: 50%;
+        border: 5px solid $color;
+        border-color: $color transparent $color transparent;
+        animation: loading-spinner 1.2s linear infinite;
+    }
+
+    @keyframes loading-spinner {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+  

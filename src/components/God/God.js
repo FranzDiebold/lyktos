@@ -15,7 +15,7 @@ import GodPropType from '../../utils/GodPropType';
 import './God.scss';
 
 function God(props) {
-    const {god, godsMap} = props;
+    const { god, godsMap } = props;
 
     return (
         <Box className={`god ${god.type}`}>

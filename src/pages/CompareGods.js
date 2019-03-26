@@ -8,7 +8,7 @@ import CompareGodsList from '../components/CompareGodsList/CompareGodsList';
 import GodPropType from '../utils/GodPropType';
 
 function Compare(props) {
-    const {godCounterparts, godsMap, filterText} = props;
+    const { godCounterparts, isLoading, godsMap, filterText } = props;
 
     return (
         <div>
@@ -27,6 +27,7 @@ function Compare(props) {
 
                                     <CompareGodsList
                                         godCounterparts={godCounterparts}
+                                        isLoading={isLoading}
                                         filterText={filterText}
                                         godsMap={godsMap}
                                     />
@@ -42,14 +43,9 @@ function Compare(props) {
 
 Compare.propTypes = {
     godCounterparts: PropTypes.arrayOf(PropTypes.objectOf(GodPropType)),
-    filterText: PropTypes.string,
+    isLoading: PropTypes.bool.isRequired,
+    filterText: PropTypes.string.isRequired,
     godsMap: PropTypes.objectOf(GodPropType),
-};
-
-Compare.defaultProps = {
-    godCounterparts: [],
-    filterText: '',
-    godsMap: {},
 };
 
 export default Compare;

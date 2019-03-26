@@ -5,12 +5,13 @@ import PropTypes from 'prop-types';
 import { Section, Hero, HeroBody, Container, Columns, Column, Title } from 'bloomer';
 
 import God from '../components/God/God';
+import LoadingIndicator from '../components/LoadingIndicator/LoadingIndicator';
 import { godsSortedFilter } from '../utils/godsSortedFilter';
 import { capitalizeFirstCharacter } from '../utils/capitalizeFirstCharacter';
 import GodPropType from '../utils/GodPropType';
 
 function GodsList(props) {
-    const {type, godsList, filterText, godsMap} = props;
+    const { type, godsList, isLoading, filterText, godsMap } = props;
 
     const gods = godsSortedFilter(godsList, filterText)
         .map(god => <God key={god.id} god={god} godsMap={godsMap} />);
@@ -30,7 +31,11 @@ function GodsList(props) {
                                 <Column isSize={{mobile: 12, tablet: 10, desktop: 8}}>
                                     <Title>{capitalizeFirstCharacter(type)} Gods and Goddesses</Title>
 
-                                    {gods}
+                                    {
+                                        isLoading ?
+                                            <LoadingIndicator /> :
+                                            gods
+                                    }
                                 </Column>
                             </Columns>
                         </Container>
@@ -42,17 +47,11 @@ function GodsList(props) {
 }
 
 GodsList.propTypes = {
-    type: PropTypes.string,
-    godsList: PropTypes.arrayOf(GodPropType).isRequired,
-    filterText: PropTypes.string,
-    godsMap: PropTypes.objectOf(GodPropType).isRequired,
-};
-
-GodsList.defaultProps = {
-    type: '',
-    godsList: [],
-    filterText: '',
-    godsMap: {},
+    type: PropTypes.string.isRequired,
+    godsList: PropTypes.arrayOf(GodPropType),
+    isLoading: PropTypes.bool.isRequired,
+    filterText: PropTypes.string.isRequired,
+    godsMap: PropTypes.objectOf(GodPropType),
 };
 
 export default GodsList;

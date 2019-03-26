@@ -7,10 +7,10 @@ import God from './../God/God';
 import GodPropType from '../../utils/GodPropType';
 
 function GodPair(props) {
-    const {godPair, godsMap} = props;
+    const { godPair, godsMap } = props;
 
     return (
-        <Columns key={`${godPair.greek.id}-${godPair.roman.id}`}>
+        <Columns>
             <Column>
                 <God god={godPair.greek} godsMap={godsMap} />
             </Column>

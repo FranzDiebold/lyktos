@@ -7,6 +7,7 @@ import Content from './layout/Content';
 import Footer from './layout/Footer';
 
 function Layout(props) {
+    const { godsData, isLoading } = props;
     const [filterText, setFilterText] = useState('');
 
     return (
@@ -16,14 +17,19 @@ function Layout(props) {
                 <title>🔱 lyktos</title>
             </Helmet>
             <Header setFilterText={setFilterText} />
-            <Content godsData={props.godsData} filterText={filterText} />
+            <Content
+                godsData={godsData}
+                isLoading={isLoading}
+                filterText={filterText}
+            />
             <Footer />
         </div>
     );
 }
 
 Layout.propTypes = {
-    godsData: PropTypes.object,
+    godsData: PropTypes.object.isRequired,
+    isLoading: PropTypes.bool.isRequired,
 };
 
 export default Layout;

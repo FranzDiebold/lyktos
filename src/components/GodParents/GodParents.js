@@ -5,7 +5,7 @@ import GodTag from '../GodTag/GodTag';
 import GodPropType from '../../utils/GodPropType';
 
 function GodParents(props) {
-    const {parents, type, godsMap} = props;
+    const { parents, type, godsMap } = props;
 
     const parentTags = parents.map(parent => <GodTag key={parent} name={parent} type={type} godsMap={godsMap} />);
 

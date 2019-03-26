@@ -1,14 +1,15 @@
 import React from 'react';
 
-import { Section, Hero, HeroBody, Container, Title } from 'bloomer';
+import { Section, Hero, HeroBody, Container, Title, Subtitle } from 'bloomer';
 
 function NotFound() {
     return (
-        <Section>
+        <Section className="has-heaven-bg">
             <Hero isSize="medium">
                 <HeroBody>
                     <Container className="has-text-centered">
-                        <Title>Not found...</Title>
+                        <Title isSize="2"><span role="img" aria-label="magnifying glass">🔍</span> 404</Title>
+                        <Subtitle isSize="3">Not found...</Subtitle>
                     </Container>
                 </HeroBody>
             </Hero>

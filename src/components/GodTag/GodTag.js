@@ -10,7 +10,7 @@ import GodPropType from '../../utils/GodPropType';
 import './GodTag.scss';
 
 function GodTag(props) {
-    const {name, type, godsMap} = props;
+    const { name, type, godsMap } = props;
 
     if (name in godsMap) {
         const god = godsMap[name];

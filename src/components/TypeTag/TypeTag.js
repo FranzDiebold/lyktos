@@ -7,7 +7,7 @@ import { Tag } from 'bloomer';
 import './TypeTag.scss';
 
 function TypeTag(props) {
-    const {type} = props;
+    const { type } = props;
 
     return (
         <Link to={`/${type}`} className="type">

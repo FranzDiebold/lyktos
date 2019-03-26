@@ -8,16 +8,24 @@ import LoadGods from './utils/LoadGods';
 
 function App() {
   const [godsData, setGodsData] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    setIsLoading(true);
     LoadGods()
-      .then(godsData => setGodsData(godsData))
-      .catch(err => console.log(err));
+      .then(godsData => {
+        setGodsData(godsData);
+        setIsLoading(false);
+      })
+      .catch(err => {
+        setIsLoading(false);
+        console.log(err);
+      });
   }, []);
 
   return (
     <Router>
-      <Layout godsData={godsData} />
+      <Layout godsData={godsData} isLoading={isLoading} />
     </Router>
   );
 }
