@@ -19,7 +19,7 @@ You create :trident: lyktos!
 - [Bloomer](https://github.com/AlgusDark/bloomer)
 
 
-# Etymology
+## Etymology
 Lyktos, Lyctus or Lyttos (Greek: Λύκτος or Λύττος), was one of the most considerable cities in ancient Crete, which appears in the Homeric catalogue. Lyttos is now a village in the municipality of Minoa Pediada.
 
 According to Hesiod, Theogony (477-484), Rhea gave birth to Zeus in Lyctus and hid him in a cave of Mount Aegaeon. The inhabitants of this ancient Doric city called themselves colonists of Sparta, and the worship of Apollo appears to have prevailed there.
