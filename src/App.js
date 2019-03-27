@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import './App.scss';
 
+import ScrollToTop from './utils/ScrollToTop';
 import Layout from './Layout';
 import LoadGods from './utils/LoadGods';
 
@@ -25,7 +26,9 @@ function App() {
 
   return (
     <Router>
-      <Layout godsData={godsData} isLoading={isLoading} />
+      <ScrollToTop>
+        <Layout godsData={godsData} isLoading={isLoading} />
+      </ScrollToTop>
     </Router>
   );
 }
