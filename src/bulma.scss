@@ -30,3 +30,11 @@ $footer-padding: 1rem 0;
 @import "~bulma/sass/layout/footer.sass";
 @import "~bulma/sass/layout/hero.sass";
 @import "~bulma/sass/layout/section.sass";
+
+// fix columns to wide on mobile (https://github.com/jgthms/bulma/issues/449)
+@media screen and (max-width: 1024px) {
+    .columns {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
