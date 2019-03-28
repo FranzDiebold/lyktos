@@ -33,8 +33,10 @@ $footer-padding: 1rem 0;
 
 // fix columns to wide on mobile (https://github.com/jgthms/bulma/issues/449)
 @media screen and (max-width: 1024px) {
-    .columns {
-        margin-left: 0;
-        margin-right: 0;
+    footer.footer {
+        .columns {
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 }

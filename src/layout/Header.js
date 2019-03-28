@@ -70,7 +70,7 @@ function Header(props) {
             <Container>
                 <NavbarBrand>
                     <NavbarItem href="/">
-                        <span className="is-size-3" role="img" aria-label="trident">🔱</span>
+                        <span className="is-size-4" role="img" aria-label="trident">🔱</span>
                     </NavbarItem>
                     <NavbarBurger isActive={mobileMenuOpen} onClick={toggleMobileMenu} />
                 </NavbarBrand>
