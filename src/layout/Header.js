@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import {
     Container,
-    Navbar, NavbarBrand, NavbarItem, NavbarBurger, NavbarMenu, NavbarEnd,
+    Navbar, NavbarBrand, NavbarItem, NavbarBurger, NavbarMenu, NavbarStart,NavbarEnd,
     Control, Input,
 } from 'bloomer';
 
@@ -74,9 +74,11 @@ function Header(props) {
                     </NavbarItem>
                     <NavbarBurger isActive={mobileMenuOpen} onClick={toggleMobileMenu} />
                 </NavbarBrand>
-                <NavbarMenu isActive={mobileMenuOpen} onClick={toggleMobileMenu} >
-                    <NavbarEnd>
+                <NavbarMenu isActive={mobileMenuOpen}>
+                    <NavbarStart>
                         {filter}
+                    </NavbarStart>
+                    <NavbarEnd onClick={toggleMobileMenu}>
                         <NavLink className="navbar-item" to="/compare" activeClassName="is-active">Compare</NavLink>
                         <NavLink className="navbar-item" to="/greek" activeClassName="is-active">Greek</NavLink>
                         <NavLink className="navbar-item" to="/roman" activeClassName="is-active">Roman</NavLink>
