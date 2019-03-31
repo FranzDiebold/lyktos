@@ -24,7 +24,7 @@ function Content(props) {
                     godsMap={godsData.godsMap}
                 />}
             />
-            <Route exact path="/greek" render={() => <GodsList
+            <Route exact path="/compare/greek" render={() => <GodsList
                     type="greek"
                     godsList={godsData.greekGods}
                     isLoading={isLoading}
@@ -32,7 +32,7 @@ function Content(props) {
                     godsMap={godsData.godsMap}
                 />}
             />
-            <Route exact path="/roman" render={() => <GodsList
+            <Route exact path="/compare/roman" render={() => <GodsList
                     type="roman"
                     godsList={godsData.romanGods}
                     isLoading={isLoading}
@@ -40,7 +40,7 @@ function Content(props) {
                     godsMap={godsData.godsMap}
                 />}
             />
-            <Route exact path="/(greek|roman)/:name([a-z-]+)"
+            <Route exact path="/compare/(greek|roman)/:name([a-z-]+)"
                     render={({ match }) => <GodDetail
                         name={match.params.name}
                         godsMap={godsData.godsMap}

@@ -10,7 +10,7 @@ function TypeTag(props) {
     const { type } = props;
 
     return (
-        <Link to={`/${type}`} className="type">
+        <Link to={`/compare/${type}`} className="type">
             <Tag isSize="medium" className={type}>{type}</Tag>
         </Link>
     );

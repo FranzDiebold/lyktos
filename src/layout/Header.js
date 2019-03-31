@@ -80,8 +80,8 @@ function Header(props) {
                     </NavbarStart>
                     <NavbarEnd onClick={toggleMobileMenu}>
                         <NavLink className="navbar-item" to="/compare" activeClassName="is-active">Compare</NavLink>
-                        <NavLink className="navbar-item" to="/greek" activeClassName="is-active">Greek</NavLink>
-                        <NavLink className="navbar-item" to="/roman" activeClassName="is-active">Roman</NavLink>
+                        <NavLink className="navbar-item" to="/compare/greek" activeClassName="is-active">Greek</NavLink>
+                        <NavLink className="navbar-item" to="/compare/roman" activeClassName="is-active">Roman</NavLink>
                         <NavLink className="navbar-item" to="/about" activeClassName="is-active">{aboutIcon}</NavLink>
                         <NavbarItem href="https://github.com/FranzDiebold/lyktos" target="_blank">{githubIcon}</NavbarItem>
                     </NavbarEnd>

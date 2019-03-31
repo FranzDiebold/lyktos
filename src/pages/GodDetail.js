@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 
 import {
@@ -31,13 +32,21 @@ function GodDetail(props) {
                         isLoading ?
                             <LoadingIndicator /> :
                             <div>
+                                <Helmet>
+                                    { /* eslint-disable-next-line */ }
+                                    <title>{god.emoji} {god.name} | 🔱 lyktos</title>
+                                </Helmet>
+
                                 <Breadcrumb>
                                     <ul>
                                         <BreadcrumbItem>
-                                            <Link to={`/${god.type}`}>{capitalizeFirstCharacter(god.type)}</Link>
+                                            <Link to="/compare">Compare</Link>
+                                        </BreadcrumbItem>
+                                        <BreadcrumbItem>
+                                            <Link to={`/compare/${god.type}`}>{capitalizeFirstCharacter(god.type)}</Link>
                                         </BreadcrumbItem>
                                         <BreadcrumbItem isActive>
-                                            <a href>{god.name}</a>
+                                            <Link to={`/compare/${god.type}/${god.id}`}>{god.emoji} {god.name}</Link>
                                         </BreadcrumbItem>
                                     </ul>
                                 </Breadcrumb>

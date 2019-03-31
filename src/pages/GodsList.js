@@ -1,8 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 
-import { Hero, HeroBody, Columns, Column, Title } from 'bloomer';
+import {
+    Section,
+    Breadcrumb, BreadcrumbItem,
+    Columns, Column,
+    Title
+} from 'bloomer';
 
 import God from '../components/God/God';
 import LoadingIndicator from '../components/LoadingIndicator/LoadingIndicator';
@@ -28,21 +34,30 @@ function GodsList(props) {
                 <title>{capitalizeFirstCharacter(type)} Gods and Goddesses | 🔱 lyktos</title>
             </Helmet>
 
-            <Hero className="has-heaven-bg">
-                <HeroBody>
-                    <Columns isCentered>
-                        <Column isSize={{mobile: 12, tablet: 10, desktop: 8}}>
-                            <Title>{capitalizeFirstCharacter(type)} Gods and Goddesses</Title>
+            <Section className="has-heaven-bg">
+                <Columns isCentered>
+                    <Column isSize={{mobile: 12, tablet: 10, desktop: 8}}>
+                        <Breadcrumb>
+                            <ul>
+                                <BreadcrumbItem>
+                                    <Link to="/compare">Compare</Link>
+                                </BreadcrumbItem>
+                                <BreadcrumbItem isActive>
+                                    <Link to={`/compare/${type}`}>{capitalizeFirstCharacter(type)}</Link>
+                                </BreadcrumbItem>
+                            </ul>
+                        </Breadcrumb>
 
-                            {
-                                isLoading ?
-                                    <LoadingIndicator /> :
-                                    gods
-                            }
-                        </Column>
-                    </Columns>
-                </HeroBody>
-            </Hero>
+                        <Title>{capitalizeFirstCharacter(type)} Gods and Goddesses</Title>
+
+                        {
+                            isLoading ?
+                                <LoadingIndicator /> :
+                                gods
+                        }
+                    </Column>
+                </Columns>
+            </Section>
         </div>
     );
 }
