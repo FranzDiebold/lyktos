@@ -5,9 +5,9 @@ import GodPropType from '../../utils/GodPropType';
 import { Column, Button } from 'bloomer';
 
 import { getGodUrl } from '../../utils/getGodUrl';
-import './ShowDetailedButton.scss';
+import './DetailedButton.scss';
 
-function ShowDetailedButton(props) {
+function DetailedButton(props) {
     const { god } = props;
 
     const detailIcon = (
@@ -23,15 +23,15 @@ function ShowDetailedButton(props) {
                     <span className="icon">
                         {detailIcon}
                     </span>
-                    <span>Show detailed</span>
+                    <span>Detailed</span>
                 </Button>
             </Link>
         </Column>
     );
 }
 
-ShowDetailedButton.propTypes = {
+DetailedButton.propTypes = {
     god: GodPropType.isRequired,
 };
 
-export default ShowDetailedButton;
+export default DetailedButton;

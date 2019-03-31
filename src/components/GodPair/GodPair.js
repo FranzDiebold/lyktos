@@ -10,7 +10,7 @@ import {
 import GodSymbols from '../GodSymbols/GodSymbols';
 import GodParents from '../GodParents/GodParents';
 import TypeTag from '../TypeTag/TypeTag';
-import ShowDetailedButton from '../ShowDetailedButton/ShowDetailedButton';
+import DetailedButton from '../DetailedButton/DetailedButton';
 import GodPropType from '../../utils/GodPropType';
 import './GodPair.scss';
 
@@ -72,8 +72,8 @@ function GodPair(props) {
                 </Columns>
 
                 <Columns isMobile>
-                    <ShowDetailedButton god={greekGod} />
-                    <ShowDetailedButton god={romanGod} />
+                    <DetailedButton god={greekGod} />
+                    <DetailedButton god={romanGod} />
                 </Columns>
             </div>
         </Box>
