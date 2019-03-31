@@ -5,12 +5,11 @@
     "bloomer": "^0.6.5",
     "bulma": "^0.7.4",
     "prop-types": "^15.7.2",
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-helmet": "^6.0.0-beta",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "^2.1.8",
-    "react-truncate": "^2.4.0"
+    "react-scripts": "^2.1.8"
   },
   "scripts": {
     "predeploy": "npm run build",

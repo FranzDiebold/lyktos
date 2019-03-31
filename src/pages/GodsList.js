@@ -14,7 +14,12 @@ function GodsList(props) {
     const { type, godsList, isLoading, filterText, godsMap } = props;
 
     const gods = godsSortedFilter(godsList, filterText)
-        .map(god => <God key={god.id} god={god} godsMap={godsMap} />);
+        .map(god => <God
+                        key={god.id}
+                        god={god}
+                        showDetailed={false}
+                        godsMap={godsMap}
+                    />);
 
     return (
         <div>

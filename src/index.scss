@@ -1,5 +1,6 @@
 @import './bulma.scss';
 
+// Sections
 section.has-heaven-bg {
     background-image: url('/img/gods/heaven.svg');
     background-position: top;
@@ -13,4 +14,48 @@ section.has-white-bg {
 
 section.has-colored-bg {
     background-color: #e3f6fa;
+}
+
+// God
+.god,
+.god-pair {
+    $god-image-size: 12rem;
+
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+
+    &.greek-bg {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, mix($greek-color, $white, $opacity) 100%);
+    }
+
+    &.roman-bg {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, mix($roman-color, $white, $opacity) 100%);
+    }
+
+    .god--image {
+        text-align: center;
+        margin-bottom: 1.5rem;
+
+        img {
+            margin-top: -1.25rem - $god-image-size / 2;
+            height: $god-image-size;
+        }
+    }
+
+    .god--type {
+        @extend .is-pulled-right;
+    }
+
+    .god--name {
+        font-family: $family-secondary;
+    }
+
+    .god--role {
+        font-style: italic;
+    }
+
+    .god--label {
+        @extend .has-text-grey;
+        @extend .is-italic;
+    }
 }

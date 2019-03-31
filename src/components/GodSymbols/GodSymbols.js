@@ -9,11 +9,8 @@ function GodSymbols(props) {
     const symbolTags = symbols.map(symbol => <Tag key={symbol}>{symbol}</Tag>);
 
     return (
-        <div>
-            <span className="has-text-grey is-italic">Symbols</span>
-            <div className="tags are-medium">
-                {symbolTags}
-            </div>
+        <div className="tags are-medium">
+            {symbolTags}
         </div>
     );
 }

@@ -1,42 +1,5 @@
 .god {
-    $god-image-size: 12rem;
-
-    margin-top: 10rem;
-    margin-bottom: 3rem;
-
-    &.greek {
-        background: -moz-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(244,249,255,1) 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(244,249,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(244,249,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    }
-
-    &.roman {
-        background: -moz-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(255,245,244,1) 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(255,245,244,1) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(255,245,244,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    }
-
-    .god--image {
-        text-align: center;
-        margin-bottom: 1.5rem;
-
-        img {
-            margin-top: -1.25rem - $god-image-size / 2;
-            height: $god-image-size;
-        }
-    }
-
-    .god--content {
-        .god--name {
-            font-family: "Cinzel";
-        }
-
-        .god--role {
-            font-style: italic;
-        }
-
-        .god--description {
-            text-align: justify;
-        }
+    .god--description {
+        text-align: justify;
     }
 }

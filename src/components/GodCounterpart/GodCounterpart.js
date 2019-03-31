@@ -11,7 +11,6 @@ function GodCounterpart(props) {
 
     return (
         <div>
-            <span className="has-text-grey is-italic">Counterpart</span>
             {counterpartTag}
         </div>
     );

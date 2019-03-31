@@ -10,11 +10,8 @@ function GodParents(props) {
     const parentTags = parents.map(parent => <GodTag key={parent} name={parent} type={type} godsMap={godsMap} />);
 
     return (
-        <div>
-            <span className="has-text-grey is-italic">Parents</span>
-            <div className="field is-grouped is-grouped-multiline">
-                {parentTags}
-            </div>
+        <div className="field is-grouped is-grouped-multiline">
+            {parentTags}
         </div>
     );
 }

@@ -23,7 +23,11 @@ function GodDetail(props) {
                 {
                     isLoading ?
                         <LoadingIndicator /> :
-                        <God god={god} godsMap={godsMap} />
+                        <God
+                            god={god}
+                            showDetailed={true}
+                            godsMap={godsMap}
+                        />
                 }
             </Container>
         </Section>
