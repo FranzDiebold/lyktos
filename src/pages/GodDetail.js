@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Section, Container } from 'bloomer';
+import { Section } from 'bloomer';
 
 import God from '../components/God/God';
 import LoadingIndicator from '../components/LoadingIndicator/LoadingIndicator';
@@ -19,17 +19,15 @@ function GodDetail(props) {
 
     return (
         <Section className="has-heaven-bg">
-            <Container>
-                {
-                    isLoading ?
-                        <LoadingIndicator /> :
-                        <God
-                            god={god}
-                            showDetailed={true}
-                            godsMap={godsMap}
-                        />
-                }
-            </Container>
+            {
+                isLoading ?
+                    <LoadingIndicator /> :
+                    <God
+                        god={god}
+                        showDetailed={true}
+                        godsMap={godsMap}
+                    />
+            }
         </Section>
     );
 }

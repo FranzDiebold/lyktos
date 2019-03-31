@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 
-import { Section, Hero, HeroBody, Container, Columns, Column, Title } from 'bloomer';
+import { Hero, HeroBody, Container, Columns, Column, Title } from 'bloomer';
 
 import GodPair from '../components/GodPair/GodPair';
 import LoadingIndicator from '../components/LoadingIndicator/LoadingIndicator';
@@ -22,25 +22,23 @@ function Compare(props) {
                 <title>Compare Greek and Roman Gods and Goddesses | 🔱 lyktos</title>
             </Helmet>
 
-            <Section className="has-heaven-bg">
-                <Hero>
-                    <HeroBody>
-                        <Container>
-                            <Columns isCentered>
-                                <Column isSize={{mobile: 12, tablet: 12, desktop: 10}}>
-                                    <Title>Compare Greek and Roman Gods and Goddesses</Title>
+            <Hero className="has-heaven-bg">
+                <HeroBody>
+                    <Container>
+                        <Columns isCentered>
+                            <Column isSize={{mobile: 12, tablet: 12, desktop: 10}}>
+                                <Title>Compare Greek and Roman Gods and Goddesses</Title>
 
-                                    {
-                                        isLoading ?
-                                            <LoadingIndicator /> :
-                                            compareGods
-                                    }
-                                </Column>
-                            </Columns>
-                        </Container>
-                    </HeroBody>
-                </Hero>
-            </Section>
+                                {
+                                    isLoading ?
+                                        <LoadingIndicator /> :
+                                        compareGods
+                                }
+                            </Column>
+                        </Columns>
+                    </Container>
+                </HeroBody>
+            </Hero>
         </div>
     );
 }

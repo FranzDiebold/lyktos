@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 
-import { Section, Hero, HeroBody, Container, Columns, Column, Title } from 'bloomer';
+import { Hero, HeroBody, Columns, Column, Title } from 'bloomer';
 
 import God from '../components/God/God';
 import LoadingIndicator from '../components/LoadingIndicator/LoadingIndicator';
@@ -28,25 +28,21 @@ function GodsList(props) {
                 <title>{capitalizeFirstCharacter(type)} Gods and Goddesses | 🔱 lyktos</title>
             </Helmet>
 
-            <Section className="has-heaven-bg">
-                <Hero>
-                    <HeroBody>
-                        <Container>
-                            <Columns isCentered>
-                                <Column isSize={{mobile: 12, tablet: 10, desktop: 8}}>
-                                    <Title>{capitalizeFirstCharacter(type)} Gods and Goddesses</Title>
+            <Hero className="has-heaven-bg">
+                <HeroBody>
+                    <Columns isCentered>
+                        <Column isSize={{mobile: 12, tablet: 10, desktop: 8}}>
+                            <Title>{capitalizeFirstCharacter(type)} Gods and Goddesses</Title>
 
-                                    {
-                                        isLoading ?
-                                            <LoadingIndicator /> :
-                                            gods
-                                    }
-                                </Column>
-                            </Columns>
-                        </Container>
-                    </HeroBody>
-                </Hero>
-            </Section>
+                            {
+                                isLoading ?
+                                    <LoadingIndicator /> :
+                                    gods
+                            }
+                        </Column>
+                    </Columns>
+                </HeroBody>
+            </Hero>
         </div>
     );
 }
