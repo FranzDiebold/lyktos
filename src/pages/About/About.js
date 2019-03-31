@@ -18,7 +18,7 @@ function About() {
                 <title>about 🔱 lyktos</title>
             </Helmet>
 
-            <Image src="img/gods/gods.svg" />
+            <Image src="img/gods/gods.png" />
 
             <Section className="first-section-after-title-image">
                 <Hero>
