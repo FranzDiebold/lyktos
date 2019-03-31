@@ -31,15 +31,15 @@ function GodPair(props) {
                         <div className="god--type">
                             <TypeTag type={greekGod.type} />
                         </div>
-                        <Title className="god--name" isSize="2">{greekGod.emoji} {greekGod.name}</Title>
-                        <Subtitle className="god--role" isSize="6">{greekGod.role}</Subtitle>
+                        <Title className="god--name" isSize={2}>{greekGod.emoji} {greekGod.name}</Title>
+                        <Subtitle className="god--role" isSize={6}>{greekGod.role}</Subtitle>
                     </Column>
                     <Column>
                         <div className="god--type">
                             <TypeTag type={romanGod.type} />
                         </div>
-                        <Title className="god--name" isSize="2">{romanGod.emoji} {romanGod.name}</Title>
-                        <Subtitle className="god--role" isSize="6">{romanGod.role}</Subtitle>
+                        <Title className="god--name" isSize={2}>{romanGod.emoji} {romanGod.name}</Title>
+                        <Subtitle className="god--role" isSize={6}>{romanGod.role}</Subtitle>
                     </Column>
                 </Columns>
 

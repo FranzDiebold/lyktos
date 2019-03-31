@@ -37,8 +37,8 @@ function God(props) {
                 <div className="god--type">
                     <TypeTag type={god.type} />
                 </div>
-                <Title className="god--name" isSize="2">{god.emoji} {god.name}</Title>
-                <Subtitle className="god--role" isSize="6">{god.role}</Subtitle>
+                <Title className="god--name" isSize={2}>{god.emoji} {god.name}</Title>
+                <Subtitle className="god--role" isSize={6}>{god.role}</Subtitle>
 
                 <Columns>
                     <Column>
