@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import GodPropType from '../../utils/GodPropType';
 
 import { Column, Button } from 'bloomer';
 
 import { getGodUrl } from '../../utils/getGodUrl';
-import './DetailedButton.scss';
+import GodPropType from '../../utils/GodPropType';
 
-function DetailedButton(props) {
+function GodDetailedButton(props) {
     const { god } = props;
 
     const detailIcon = (
@@ -19,7 +18,7 @@ function DetailedButton(props) {
     return (
         <Column className="has-text-centered">
             <Link to={getGodUrl(god)}>
-                <Button isOutlined className={`is-detailed is-${god.type}`}>
+                <Button isOutlined className="is-detailed">
                     <span className="icon">
                         {detailIcon}
                     </span>
@@ -30,8 +29,8 @@ function DetailedButton(props) {
     );
 }
 
-DetailedButton.propTypes = {
+GodDetailedButton.propTypes = {
     god: GodPropType.isRequired,
 };
 
-export default DetailedButton;
+export default GodDetailedButton;

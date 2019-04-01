@@ -9,32 +9,33 @@ import {
     Columns, Column,
 } from 'bloomer';
 
-import God from '../components/God/God';
+import GodPair from '../components/GodPair/GodPair';
 import LoadingIndicator from '../components/LoadingIndicator/LoadingIndicator';
-import { capitalizeFirstCharacter } from '../utils/capitalizeFirstCharacter';
 import NotFound from './NotFound';
 import GodPropType from '../utils/GodPropType';
 
-function GodDetail(props) {
-    const { name, godsMap, isLoading } = props;
+function CompareGodsDetail(props) {
+    const { nameGreek, nameRoman, godsMap, isLoading } = props;
 
-    if (! isLoading && godsMap && ! godsMap.hasOwnProperty(name)) {
+    if (! isLoading && godsMap && (! godsMap.hasOwnProperty(nameGreek) || ! godsMap.hasOwnProperty(nameRoman))) {
         return <NotFound />;
     }
 
-    const god = godsMap ? godsMap[name] : undefined;
+    const greekGod = godsMap ? godsMap[nameGreek] : undefined;
+    const romanGod = godsMap ? godsMap[nameRoman] : undefined;
+    const godPair = godsMap ? { greek: greekGod, roman: romanGod} : undefined;
 
     return (
         <Section className="has-heaven-bg">
             <Columns isCentered>
-                <Column isSize={{mobile: 12, tablet: 10, desktop: 8}}>
+                <Column isSize={{mobile: 12, tablet: 12, desktop: 10}}>
                     {
                         isLoading ?
                             <LoadingIndicator /> :
                             <div>
                                 <Helmet>
                                     { /* eslint-disable-next-line */ }
-                                    <title>{god.emoji} {god.name} | 🔱 lyktos</title>
+                                    <title>{greekGod.emoji} {greekGod.name} vs. {romanGod.emoji} {romanGod.name} | 🔱 lyktos</title>
                                 </Helmet>
 
                                 <Breadcrumb>
@@ -42,17 +43,14 @@ function GodDetail(props) {
                                         <BreadcrumbItem>
                                             <Link to="/compare">Compare</Link>
                                         </BreadcrumbItem>
-                                        <BreadcrumbItem>
-                                            <Link to={`/compare/${god.type}`}>{capitalizeFirstCharacter(god.type)}</Link>
-                                        </BreadcrumbItem>
                                         <BreadcrumbItem isActive>
-                                            <Link to={`/compare/${god.type}/${god.id}`}>{god.emoji} {god.name}</Link>
+                                            <Link to={`/compare/${greekGod.id}-vs-${romanGod.id}`}>{greekGod.emoji} {greekGod.name} vs. {romanGod.emoji} {romanGod.name}</Link>
                                         </BreadcrumbItem>
                                     </ul>
                                 </Breadcrumb>
 
-                                <God
-                                    god={god}
+                                <GodPair
+                                    godPair={godPair}
                                     showDetailed={true}
                                     godsMap={godsMap}
                                 />
@@ -64,10 +62,11 @@ function GodDetail(props) {
     );
 }
 
-GodDetail.propTypes = {
-    name: PropTypes.string.isRequired,
+CompareGodsDetail.propTypes = {
+    nameGreek: PropTypes.string.isRequired,
+    nameRoman: PropTypes.string.isRequired,
     godsMap: PropTypes.objectOf(GodPropType),
-    isLoading: PropTypes.bool.isRequired
+    isLoading: PropTypes.bool.isRequired,
 };
 
-export default GodDetail;
+export default CompareGodsDetail;

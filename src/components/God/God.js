@@ -11,7 +11,7 @@ import GodSymbols from '../GodSymbols/GodSymbols';
 import GodParents from '../GodParents/GodParents';
 import GodCounterpart from '../GodCounterpart/GodCounterpart';
 import TypeTag from '../TypeTag/TypeTag';
-import DetailedButton from '../DetailedButton/DetailedButton';
+import GodDetailedButton from '../GodDetailedButton/GodDetailedButton';
 import GodPropType from '../../utils/GodPropType';
 import './God.scss';
 
@@ -24,7 +24,7 @@ function God(props) {
             </Column>
         ) :
         (
-            <DetailedButton god={god} />
+            <GodDetailedButton god={god} />
         );
 
     return (

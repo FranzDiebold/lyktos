@@ -58,4 +58,12 @@ section.has-colored-bg {
         @extend .has-text-grey;
         @extend .is-italic;
     }
+
+    .god--description {
+        text-align: justify;
+    }
+}
+
+.button.is-detailed {
+    background-color: transparent;
 }

@@ -9,11 +9,16 @@ import LoadingIndicator from '../components/LoadingIndicator/LoadingIndicator';
 import { godsCounterpartsSortedFilter } from '../utils/godsSortedFilter';
 import GodPropType from '../utils/GodPropType';
 
-function Compare(props) {
+function CompareGodsList(props) {
     const { godCounterparts, isLoading, filterText, godsMap } = props;
 
     const compareGods = godsCounterpartsSortedFilter(godCounterparts, filterText)
-        .map(godPair => <GodPair key={`${godPair.greek.id}-${godPair.roman.id}`} godPair={godPair} godsMap={godsMap} />);
+        .map(godPair => <GodPair
+                            key={`${godPair.greek.id}-${godPair.roman.id}`}
+                            godPair={godPair}
+                            showDetailed={false}
+                            godsMap={godsMap}
+                        />);
 
     return (
         <div>
@@ -43,11 +48,11 @@ function Compare(props) {
     );
 }
 
-Compare.propTypes = {
+CompareGodsList.propTypes = {
     godCounterparts: PropTypes.arrayOf(PropTypes.objectOf(GodPropType)),
     isLoading: PropTypes.bool.isRequired,
     filterText: PropTypes.string.isRequired,
     godsMap: PropTypes.objectOf(GodPropType),
 };
 
-export default Compare;
+export default CompareGodsList;

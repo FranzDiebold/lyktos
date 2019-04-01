@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-import CompareGods from '../pages/CompareGods';
+import CompareGodsList from '../pages/CompareGodsList';
+import CompareGodsDetail from '../pages/CompareGodsDetail';
 import GodsList from '../pages/GodsList';
 import GodDetail from '../pages/GodDetail';
 import About from '../pages/About/About';
@@ -17,12 +18,20 @@ function Content(props) {
     return (
         <Switch>
             <Route exact path="/" render={() => <Redirect to="/compare" />} />
-            <Route exact path="/compare" render={() => <CompareGods
+            <Route exact path="/compare" render={() => <CompareGodsList
                     godCounterparts={godsData.godCounterparts}
                     isLoading={isLoading}
                     filterText={filterText}
                     godsMap={godsData.godsMap}
                 />}
+            />
+            <Route exact path="/compare/:nameGreek([a-z-]+)-vs-:nameRoman([a-z-]+)"
+                    render={({ match }) => <CompareGodsDetail
+                        nameGreek={match.params.nameGreek}
+                        nameRoman={match.params.nameRoman}
+                        godsMap={godsData.godsMap}
+                        isLoading={isLoading}
+                    />}
             />
             <Route exact path="/compare/greek" render={() => <GodsList
                     type="greek"

@@ -10,14 +10,31 @@ import {
 import GodSymbols from '../GodSymbols/GodSymbols';
 import GodParents from '../GodParents/GodParents';
 import TypeTag from '../TypeTag/TypeTag';
-import DetailedButton from '../DetailedButton/DetailedButton';
+import GodPairDetailedButton from '../GodPairDetailedButton/GodPairDetailedButton';
+import GodDetailedButton from '../GodDetailedButton/GodDetailedButton';
 import GodPropType from '../../utils/GodPropType';
 import './GodPair.scss';
 
 function GodPair(props) {
-    const { godPair, godsMap } = props;
+    const { godPair, showDetailed, godsMap } = props;
     const greekGod = godPair.greek;
     const romanGod = godPair.roman;
+
+    const showDetailOrDescription = showDetailed ? (
+        <Columns isMobile className="content-columns">
+            <Column className="god--description">
+                {greekGod.description}
+            </Column>
+            <Column className="god--description">
+                {romanGod.description}
+            </Column>
+        </Columns>
+    ) :
+    (
+        <Columns>
+            <GodPairDetailedButton godPair={godPair} />
+        </Columns>
+    );
 
     return (
         <Box className="god-pair">
@@ -71,9 +88,11 @@ function GodPair(props) {
                     </Column>
                 </Columns>
 
+                {showDetailOrDescription}
+
                 <Columns isMobile>
-                    <DetailedButton god={greekGod} />
-                    <DetailedButton god={romanGod} />
+                    <GodDetailedButton god={greekGod} />
+                    <GodDetailedButton god={romanGod} />
                 </Columns>
             </div>
         </Box>
@@ -82,6 +101,7 @@ function GodPair(props) {
 
 GodPair.propTypes = {
     godPair: PropTypes.objectOf(GodPropType).isRequired,
+    showDetailed: PropTypes.bool,
     godsMap: PropTypes.objectOf(GodPropType).isRequired,
 };
 
