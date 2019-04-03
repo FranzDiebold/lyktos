@@ -18,6 +18,7 @@ You create :trident: lyktos!
 - [React Router](https://github.com/ReactTraining/react-router)
 - [React Helmet](https://github.com/nfl/react-helmet)
 - [Bloomer](https://github.com/AlgusDark/bloomer)
+- [Jest Snapshot Testing](https://jestjs.io/docs/en/snapshot-testing)
 
 
 ## Etymology
