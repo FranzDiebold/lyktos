@@ -13,21 +13,19 @@ import GodPropType from '../utils/GodPropType';
 function CompareGodsList(props) {
     const { godCounterparts, isLoading, error, filterText, godsMap } = props;
 
-    const compareGods = godsCounterpartsSortedFilter(godCounterparts, filterText)
-        .map(godPair => <GodPair
-                            key={`${godPair.greek.id}-${godPair.roman.id}`}
-                            godPair={godPair}
-                            showDetailed={false}
-                            godsMap={godsMap}
-                        />);
-
     let content;
     if (isLoading) {
         content = <LoadingIndicator />;
     } else if (error) {
         content = <ErrorMessage message={error} />;
     } else {
-        content = compareGods;
+        content = godsCounterpartsSortedFilter(godCounterparts, filterText)
+                    .map(godPair => <GodPair
+                                        key={`${godPair.greek.id}-${godPair.roman.id}`}
+                                        godPair={godPair}
+                                        showDetailed={false}
+                                        godsMap={godsMap}
+                                    />);
     }
 
     return (

@@ -20,21 +20,19 @@ import GodPropType from '../utils/GodPropType';
 function GodsList(props) {
     const { type, godsList, isLoading, error, filterText, godsMap } = props;
 
-    const gods = godsSortedFilter(godsList, filterText)
-        .map(god => <God
-                        key={god.id}
-                        god={god}
-                        showDetailed={false}
-                        godsMap={godsMap}
-                    />);
-
     let content;
     if (isLoading) {
         content = <LoadingIndicator />;
     } else if (error) {
         content = <ErrorMessage message={error} />;
     } else {
-        content = gods;
+        content = godsSortedFilter(godsList, filterText)
+                    .map(god => <God
+                                    key={god.id}
+                                    god={god}
+                                    showDetailed={false}
+                                    godsMap={godsMap}
+                                />);
     }
 
     return (
