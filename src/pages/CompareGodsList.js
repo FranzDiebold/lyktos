@@ -19,13 +19,24 @@ function CompareGodsList(props) {
     } else if (error) {
         content = <ErrorMessage message={error} />;
     } else {
-        content = godsCounterpartsSortedFilter(godCounterparts, filterText)
-                    .map(godPair => <GodPair
-                                        key={`${godPair.greek.id}-${godPair.roman.id}`}
-                                        godPair={godPair}
-                                        showDetailed={false}
-                                        godsMap={godsMap}
-                                    />);
+        const filterSortedGodCounterparts = godsCounterpartsSortedFilter(godCounterparts, filterText);
+
+        if (filterSortedGodCounterparts.length > 0) {
+            content = filterSortedGodCounterparts.map(godPair => <GodPair
+                                                                    key={`${godPair.greek.id}-${godPair.roman.id}`}
+                                                                    godPair={godPair}
+                                                                    showDetailed={false}
+                                                                    godsMap={godsMap}
+                                                                />);
+        } else {
+            content = (
+                <Hero>
+                    <HeroBody className="has-text-centered">
+                        <Title isSize={4}>No gods found.</Title>
+                    </HeroBody>
+                </Hero>
+            );
+        }
     }
 
     return (

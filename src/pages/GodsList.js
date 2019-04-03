@@ -7,7 +7,8 @@ import {
     Section,
     Breadcrumb, BreadcrumbItem,
     Columns, Column,
-    Title
+    Title,
+    Hero, HeroBody,
 } from 'bloomer';
 
 import God from '../components/God/God';
@@ -26,13 +27,24 @@ function GodsList(props) {
     } else if (error) {
         content = <ErrorMessage message={error} />;
     } else {
-        content = godsSortedFilter(godsList, filterText)
-                    .map(god => <God
-                                    key={god.id}
-                                    god={god}
-                                    showDetailed={false}
-                                    godsMap={godsMap}
-                                />);
+        const filterSortedGods = godsSortedFilter(godsList, filterText);
+
+        if (filterSortedGods.length > 0) {
+            content = filterSortedGods.map(god => <God
+                                                    key={god.id}
+                                                    god={god}
+                                                    showDetailed={false}
+                                                    godsMap={godsMap}
+                                                />);
+        } else {
+            content = (
+                <Hero>
+                    <HeroBody className="has-text-centered">
+                        <Title isSize={4}>No gods found.</Title>
+                    </HeroBody>
+                </Hero>
+            );
+        }
     }
 
     return (
