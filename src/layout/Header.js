@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 
 import {
     Container,
-    Navbar, NavbarBrand, NavbarItem, NavbarBurger, NavbarMenu, NavbarStart,NavbarEnd,
+    Navbar, NavbarBrand, NavbarItem, NavbarBurger, NavbarMenu, NavbarEnd,
     Control, Input,
 } from 'bloomer';
 
 function showFilter(pathname) {
-    const pattern = /^\/(compare|greek|roman)/i;
+    const pattern = /^\/compare(\/greek|\/roman)?$/i;
     return pattern.test(pathname);
 }
 
@@ -72,13 +72,11 @@ function Header(props) {
                     <NavbarItem href="/">
                         <span className="is-size-4" role="img" aria-label="trident">🔱</span>
                     </NavbarItem>
+                    {filter}
                     <NavbarBurger isActive={mobileMenuOpen} onClick={toggleMobileMenu} />
                 </NavbarBrand>
-                <NavbarMenu isActive={mobileMenuOpen}>
-                    <NavbarStart>
-                        {filter}
-                    </NavbarStart>
-                    <NavbarEnd onClick={toggleMobileMenu}>
+                <NavbarMenu isActive={mobileMenuOpen} onClick={toggleMobileMenu}>
+                    <NavbarEnd>
                         <NavLink className="navbar-item" to="/compare" activeClassName="is-active">Compare</NavLink>
                         <NavLink className="navbar-item" to="/compare/greek" activeClassName="is-active">Greek</NavLink>
                         <NavLink className="navbar-item" to="/compare/roman" activeClassName="is-active">Roman</NavLink>
