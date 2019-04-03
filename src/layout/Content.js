@@ -5,11 +5,11 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import CompareGodsList from '../pages/CompareGodsList';
 import CompareGodsDetail from '../pages/CompareGodsDetail';
 import GodsList from '../pages/GodsList';
-import GodDetail from '../pages/GodDetail';
+import GodDetail from '../pages/GodDetail/GodDetail';
 import About from '../pages/About/About';
-import SiteNotice from '../pages/SiteNotice';
-import PrivacyPolicy from '../pages/PrivacyPolicy';
-import NotFound from '../pages/NotFound';
+import SiteNotice from '../pages/SiteNotice/SiteNotice';
+import PrivacyPolicy from '../pages/PrivacyPolicy/PrivacyPolicy';
+import NotFound from '../pages/NotFound/NotFound';
 import GodPropType from '../utils/GodPropType';
 
 function Content(props) {

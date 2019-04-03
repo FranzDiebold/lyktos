@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders god symbols correctly 1`] = `
+<div
+  className="tags are-medium"
+>
+  <span
+    className="tag"
+  >
+    Symbol 1
+  </span>
+  <span
+    className="tag"
+  >
+    Symbol 2
+  </span>
+</div>
+`;

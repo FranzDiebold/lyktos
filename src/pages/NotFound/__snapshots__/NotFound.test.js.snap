@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders not found page correctly 1`] = `
+<section
+  className="hero is-large has-heaven-bg"
+>
+  <div
+    className="hero-body"
+  >
+    <div
+      className="container has-text-centered"
+    >
+      <h1
+        className="title is-2"
+      >
+        <span
+          aria-label="magnifying glass"
+          role="img"
+        >
+          🔍
+        </span>
+         404
+      </h1>
+      <h2
+        className="subtitle is-3"
+      >
+        Not found...
+      </h2>
+    </div>
+  </div>
+</section>
+`;

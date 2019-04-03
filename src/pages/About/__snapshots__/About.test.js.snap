@@ -1,0 +1,295 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders about page correctly 1`] = `
+<div>
+  <figure
+    className="image"
+  >
+    <img
+      src="img/gods/gods.png"
+    />
+  </figure>
+  <section
+    className="hero is-medium first-section-after-title-image"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container has-text-centered"
+      >
+        <h1
+          className="title is-1"
+        >
+          <span
+            aria-label="thanks"
+            role="img"
+          >
+            🔱
+          </span>
+           lyktos
+        </h1>
+        <h2
+          className="subtitle is-3"
+        >
+          Compare greek and roman gods and goddesses.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <section
+    className="hero is-medium has-colored-bg"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container has-text-centered"
+      >
+        <h1
+          className="title"
+        >
+          Project background
+        </h1>
+        <div
+          className="columns is-vcentered"
+        >
+          <div
+            className="column is-4"
+          >
+            <div
+              className="columns is-centered is-mobile is-vcentered"
+            >
+              <div
+                className="column is-narrow"
+              >
+                <figure
+                  className="image is-96x96"
+                >
+                  <img
+                    src="/img/about/react-logo.svg"
+                  />
+                </figure>
+              </div>
+              <div
+                className="column is-narrow"
+              >
+                <h2
+                  className="subtitle is-1"
+                >
+                  +
+                </h2>
+              </div>
+              <div
+                className="column is-narrow"
+              >
+                <figure
+                  className="image is-96x96"
+                >
+                  <img
+                    src="/img/gods/greek/poseidon.svg"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div
+            className="column is-8 has-text-justified"
+          >
+            <div
+              className="content"
+            >
+              <p>
+                What should you do if you both want to learn 
+                <a
+                  href="https://reactjs.org"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  React
+                </a>
+                 and get to know 
+                <a
+                  href="https://en.wikipedia.org/wiki/Greek_mythology"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  greek
+                </a>
+                 and 
+                <a
+                  href="https://en.wikipedia.org/wiki/Roman_mythology"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  roman
+                </a>
+                 mythology? 
+                <br />
+                You create 
+                <span
+                  aria-label="thanks"
+                  role="img"
+                >
+                  🔱
+                </span>
+                 lyktos!
+              </p>
+              <p>
+                It is open source, check it out on 
+                <a
+                  href="https://github.com/FranzDiebold/lyktos"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  GitHub
+                </a>
+                !
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    className="hero is-medium has-white-bg"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container has-text-centered"
+      >
+        <h1
+          className="title"
+        >
+          Etymology
+        </h1>
+        <div
+          className="columns is-vcentered"
+        >
+          <div
+            className="column is-4"
+          >
+            <div
+              className="columns is-centered"
+            >
+              <div
+                className="column is-narrow"
+              >
+                <figure
+                  className="image is-128x128"
+                >
+                  <img
+                    src="/img/gods/greek/zeus.svg"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div
+            className="column is-8"
+          >
+            <div
+              className="content"
+            >
+              <p
+                className="has-text-justified"
+              >
+                <b>
+                  Lyktos
+                </b>
+                , Lyctus or Lyttos (Greek: Λύκτος or Λύττος), was one of the most considerable cities in ancient Crete, which appears in the Homeric catalogue. Lyttos is now a village in the municipality of Minoa Pediada.
+              </p>
+              <p
+                className="has-text-justified"
+              >
+                According to Hesiod, Theogony (477-484), 
+                <b>
+                  Rhea gave birth to Zeus
+                </b>
+                 in Lyctus and hid him in a cave of Mount Aegaeon. The inhabitants of this ancient Doric city called themselves colonists of Sparta, and the worship of Apollo appears to have prevailed there.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    className="hero is-medium"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container has-text-centered"
+      >
+        <h1
+          className="title"
+        >
+          <span
+            aria-label="thanks"
+            role="img"
+          >
+            🙏
+          </span>
+           Thank you!
+        </h1>
+        <div
+          className="content"
+        >
+          <p>
+            All information is taken from 
+            <a
+              href="https://www.wikipedia.org"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Wikipedia
+            </a>
+            .
+          </p>
+          <p>
+            Gods vector illustrations by 
+            <a
+              href="https://www.vecteezy.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              www.Vecteezy.com
+            </a>
+            .
+          </p>
+          <p>
+            Heaven background designed by 
+            <a
+              href="http://www.freepik.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              macrovector / Freepik
+            </a>
+            .
+          </p>
+          <p>
+            <a
+              href="https://bulma.io"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img
+                alt="Made with Bulma"
+                height="24"
+                src="https://bulma.io/images/made-with-bulma.png"
+                width="128"
+              />
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

@@ -11,7 +11,7 @@ import {
 
 import GodPair from '../components/GodPair/GodPair';
 import LoadingIndicator from '../components/LoadingIndicator/LoadingIndicator';
-import NotFound from './NotFound';
+import NotFound from './NotFound/NotFound';
 import GodPropType from '../utils/GodPropType';
 
 function CompareGodsDetail(props) {

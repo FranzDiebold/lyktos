@@ -9,11 +9,11 @@ import {
     Columns, Column,
 } from 'bloomer';
 
-import God from '../components/God/God';
-import LoadingIndicator from '../components/LoadingIndicator/LoadingIndicator';
-import { capitalizeFirstCharacter } from '../utils/capitalizeFirstCharacter';
-import NotFound from './NotFound';
-import GodPropType from '../utils/GodPropType';
+import God from '../../components/God/God';
+import LoadingIndicator from '../../components/LoadingIndicator/LoadingIndicator';
+import { capitalizeFirstCharacter } from '../../utils/capitalizeFirstCharacter';
+import NotFound from '../NotFound/NotFound';
+import GodPropType from '../../utils/GodPropType';
 
 function GodDetail(props) {
     const { type, name, godsMap, isLoading } = props;
