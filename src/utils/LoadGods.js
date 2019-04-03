@@ -35,7 +35,10 @@ function LoadGods() {
                 romanGods,
             };
         })
-        .catch(error => console.log(`Error: ${error}`));
+        .catch(error => {
+            console.log(`Error loading gods data: ${error}`);
+            throw error;
+        });
 }
 
 export default LoadGods;

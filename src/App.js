@@ -10,6 +10,7 @@ import LoadGods from './utils/LoadGods';
 function App() {
   const [godsData, setGodsData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState();
 
   useEffect(() => {
     setIsLoading(true);
@@ -17,17 +18,23 @@ function App() {
       .then(godsData => {
         setGodsData(godsData);
         setIsLoading(false);
+        setError();
       })
       .catch(err => {
+        setGodsData({});
+        setError('Error loading gods data.');
         setIsLoading(false);
-        console.log(err);
       });
   }, []);
 
   return (
     <Router>
       <ScrollToTop>
-        <Layout godsData={godsData} isLoading={isLoading} />
+        <Layout
+          godsData={godsData}
+          isLoading={isLoading}
+          error={error}
+        />
       </ScrollToTop>
     </Router>
   );

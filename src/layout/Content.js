@@ -5,7 +5,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import CompareGodsList from '../pages/CompareGodsList';
 import CompareGodsDetail from '../pages/CompareGodsDetail';
 import GodsList from '../pages/GodsList';
-import GodDetail from '../pages/GodDetail/GodDetail';
+import GodDetail from '../pages/GodDetail';
 import About from '../pages/About/About';
 import SiteNotice from '../pages/SiteNotice/SiteNotice';
 import PrivacyPolicy from '../pages/PrivacyPolicy/PrivacyPolicy';
@@ -13,7 +13,7 @@ import NotFound from '../pages/NotFound/NotFound';
 import GodPropType from '../utils/GodPropType';
 
 function Content(props) {
-    const { godsData, isLoading, filterText } = props;
+    const { godsData, isLoading, error, filterText } = props;
 
     return (
         <Switch>
@@ -21,6 +21,7 @@ function Content(props) {
             <Route exact path="/compare" render={() => <CompareGodsList
                     godCounterparts={godsData.godCounterparts}
                     isLoading={isLoading}
+                    error={error}
                     filterText={filterText}
                     godsMap={godsData.godsMap}
                 />}
@@ -31,12 +32,14 @@ function Content(props) {
                         nameRoman={match.params.nameRoman}
                         godsMap={godsData.godsMap}
                         isLoading={isLoading}
+                        error={error}
                     />}
             />
             <Route exact path="/compare/greek" render={() => <GodsList
                     type="greek"
                     godsList={godsData.greekGods}
                     isLoading={isLoading}
+                    error={error}
                     filterText={filterText}
                     godsMap={godsData.godsMap}
                 />}
@@ -45,6 +48,7 @@ function Content(props) {
                     type="roman"
                     godsList={godsData.romanGods}
                     isLoading={isLoading}
+                    error={error}
                     filterText={filterText}
                     godsMap={godsData.godsMap}
                 />}
@@ -55,6 +59,7 @@ function Content(props) {
                         name={match.params.name}
                         godsMap={godsData.godsMap}
                         isLoading={isLoading}
+                        error={error}
                     />}
             />
 
@@ -77,6 +82,7 @@ Content.propTypes = {
         romanGods: PropTypes.arrayOf(GodPropType),
     }).isRequired,
     isLoading: PropTypes.bool.isRequired,
+    error: PropTypes.string,
     filterText: PropTypes.string.isRequired,
 };
 

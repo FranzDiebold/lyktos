@@ -6,11 +6,12 @@ import { Hero, HeroBody, Container, Columns, Column, Title } from 'bloomer';
 
 import GodPair from '../components/GodPair/GodPair';
 import LoadingIndicator from '../components/LoadingIndicator/LoadingIndicator';
+import ErrorMessage from '../components/ErrorMessage/ErrorMessage';
 import { godsCounterpartsSortedFilter } from '../utils/godsSortedFilter';
 import GodPropType from '../utils/GodPropType';
 
 function CompareGodsList(props) {
-    const { godCounterparts, isLoading, filterText, godsMap } = props;
+    const { godCounterparts, isLoading, error, filterText, godsMap } = props;
 
     const compareGods = godsCounterpartsSortedFilter(godCounterparts, filterText)
         .map(godPair => <GodPair
@@ -19,6 +20,15 @@ function CompareGodsList(props) {
                             showDetailed={false}
                             godsMap={godsMap}
                         />);
+
+    let content;
+    if (isLoading) {
+        content = <LoadingIndicator />;
+    } else if (error) {
+        content = <ErrorMessage message={error} />;
+    } else {
+        content = compareGods;
+    }
 
     return (
         <div>
@@ -34,11 +44,7 @@ function CompareGodsList(props) {
                             <Column isSize={{mobile: 12, tablet: 12, desktop: 10}}>
                                 <Title>Compare Greek and Roman Gods and Goddesses</Title>
 
-                                {
-                                    isLoading ?
-                                        <LoadingIndicator /> :
-                                        compareGods
-                                }
+                                {content}
                             </Column>
                         </Columns>
                     </Container>
@@ -51,6 +57,7 @@ function CompareGodsList(props) {
 CompareGodsList.propTypes = {
     godCounterparts: PropTypes.arrayOf(PropTypes.objectOf(GodPropType)),
     isLoading: PropTypes.bool.isRequired,
+    error: PropTypes.string,
     filterText: PropTypes.string.isRequired,
     godsMap: PropTypes.objectOf(GodPropType),
 };

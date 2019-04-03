@@ -12,12 +12,13 @@ import {
 
 import God from '../components/God/God';
 import LoadingIndicator from '../components/LoadingIndicator/LoadingIndicator';
+import ErrorMessage from '../components/ErrorMessage/ErrorMessage';
 import { godsSortedFilter } from '../utils/godsSortedFilter';
 import { capitalizeFirstCharacter } from '../utils/capitalizeFirstCharacter';
 import GodPropType from '../utils/GodPropType';
 
 function GodsList(props) {
-    const { type, godsList, isLoading, filterText, godsMap } = props;
+    const { type, godsList, isLoading, error, filterText, godsMap } = props;
 
     const gods = godsSortedFilter(godsList, filterText)
         .map(god => <God
@@ -26,6 +27,15 @@ function GodsList(props) {
                         showDetailed={false}
                         godsMap={godsMap}
                     />);
+
+    let content;
+    if (isLoading) {
+        content = <LoadingIndicator />;
+    } else if (error) {
+        content = <ErrorMessage message={error} />;
+    } else {
+        content = gods;
+    }
 
     return (
         <div>
@@ -50,11 +60,7 @@ function GodsList(props) {
 
                         <Title>{capitalizeFirstCharacter(type)} Gods and Goddesses</Title>
 
-                        {
-                            isLoading ?
-                                <LoadingIndicator /> :
-                                gods
-                        }
+                        {content}
                     </Column>
                 </Columns>
             </Section>
@@ -66,6 +72,7 @@ GodsList.propTypes = {
     type: PropTypes.string.isRequired,
     godsList: PropTypes.arrayOf(GodPropType),
     isLoading: PropTypes.bool.isRequired,
+    error: PropTypes.string,
     filterText: PropTypes.string.isRequired,
     godsMap: PropTypes.objectOf(GodPropType),
 };

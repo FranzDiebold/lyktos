@@ -7,7 +7,7 @@ import Content from './layout/Content';
 import Footer from './layout/Footer';
 
 function Layout(props) {
-    const { godsData, isLoading } = props;
+    const { godsData, isLoading, error } = props;
     const [filterText, setFilterText] = useState('');
 
     return (
@@ -20,6 +20,7 @@ function Layout(props) {
             <Content
                 godsData={godsData}
                 isLoading={isLoading}
+                error={error}
                 filterText={filterText}
             />
             <Footer />
@@ -30,6 +31,7 @@ function Layout(props) {
 Layout.propTypes = {
     godsData: PropTypes.object.isRequired,
     isLoading: PropTypes.bool.isRequired,
+    error: PropTypes.string,
 };
 
 export default Layout;
