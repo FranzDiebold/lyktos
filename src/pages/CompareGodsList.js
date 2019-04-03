@@ -35,7 +35,7 @@ function CompareGodsList(props) {
                 <title>Compare Greek and Roman Gods and Goddesses | 🔱 lyktos</title>
             </Helmet>
 
-            <Hero className="has-heaven-bg">
+            <Hero className="has-heaven-bg is-wider-on-small-mobile">
                 <HeroBody>
                     <Container>
                         <Columns isCentered>

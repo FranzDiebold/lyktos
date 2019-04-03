@@ -44,3 +44,11 @@ $warning: $warning-color;
         }
     }
 }
+
+// add new screen size
+$small-mobile: 420px;
+@mixin small-mobile {
+    @media screen and (max-width: $small-mobile) {
+        @content;
+    }
+}

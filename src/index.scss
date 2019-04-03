@@ -1,5 +1,12 @@
 @import './bulma.scss';
 
+@include small-mobile() {
+    .tag {
+        white-space: normal !important;
+        height: auto !important;
+    }
+}
+
 // Sections
 section.has-heaven-bg {
     background-image: url('/img/gods/heaven.svg');
@@ -14,6 +21,26 @@ section.has-white-bg {
 
 section.has-colored-bg {
     background-color: #e3f6fa;
+}
+
+@include small-mobile() {
+    $smaller-horizontal-padding: 1rem;
+
+    .section {
+        &.is-wider-on-small-mobile {
+            padding-left: $smaller-horizontal-padding;
+            padding-right: $smaller-horizontal-padding;
+        }
+    }
+
+    .hero {
+        &.is-wider-on-small-mobile {
+            >.hero-body {
+                padding-left: $smaller-horizontal-padding;
+                padding-right: $smaller-horizontal-padding;
+            }
+        }
+    }
 }
 
 // God
@@ -48,6 +75,12 @@ section.has-colored-bg {
 
     .god--name {
         font-family: $family-secondary;
+
+        @include small-mobile() {
+            &.is-size-4-small-mobile {
+                font-size: $size-4 !important;
+            }
+        }
     }
 
     .god--role {

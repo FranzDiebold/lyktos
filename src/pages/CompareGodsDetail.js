@@ -65,7 +65,7 @@ function CompareGodsDetail(props) {
     }
 
     return (
-        <Section className="has-heaven-bg">
+        <Section className="has-heaven-bg is-wider-on-small-mobile">
             <Columns isCentered>
                 <Column isSize={{mobile: 12, tablet: 12, desktop: 10}}>
                     {content}

@@ -7,6 +7,15 @@
         rgba(255, 255, 255, 1) 50%,
         mix($roman-color, $white, $opacity) 100%);
 
+    &.box {
+        $smaller-horizontal-padding: 1rem;
+
+        @include small-mobile() {
+            padding-left: $smaller-horizontal-padding;
+            padding-right: $smaller-horizontal-padding;
+        }
+    }
+
     .columns {
         &.label-columns {
             margin-bottom: 0.3rem;
@@ -23,10 +32,18 @@
 
                 &:first-child {
                     padding-right: $mid-padding / 2;
+
+                    @include small-mobile() {
+                        padding-right: $mid-padding  / 3;
+                    }
                 }
 
                 &:last-child {
                     padding-left: $mid-padding / 2;
+
+                    @include small-mobile() {
+                        padding-left: $mid-padding  / 3;
+                    }
                 }
             }
         }
