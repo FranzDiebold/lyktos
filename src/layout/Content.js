@@ -49,8 +49,9 @@ function Content(props) {
                     godsMap={godsData.godsMap}
                 />}
             />
-            <Route exact path="/compare/(greek|roman)/:name([a-z-]+)"
+            <Route exact path="/compare/:type(greek|roman)/:name([a-z-]+)"
                     render={({ match }) => <GodDetail
+                        type={match.params.type}
                         name={match.params.name}
                         godsMap={godsData.godsMap}
                         isLoading={isLoading}

@@ -16,10 +16,15 @@ import NotFound from './NotFound';
 import GodPropType from '../utils/GodPropType';
 
 function GodDetail(props) {
-    const { name, godsMap, isLoading } = props;
+    const { type, name, godsMap, isLoading } = props;
 
-    if (! isLoading && godsMap && ! godsMap.hasOwnProperty(name)) {
-        return <NotFound />;
+    if (! isLoading && godsMap) {
+        if (! godsMap.hasOwnProperty(name)) {
+            return <NotFound />;
+        }
+        if (type !== godsMap[name].type) {
+            return <NotFound />;
+        }
     }
 
     const god = godsMap ? godsMap[name] : undefined;
@@ -65,6 +70,7 @@ function GodDetail(props) {
 }
 
 GodDetail.propTypes = {
+    type: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     godsMap: PropTypes.objectOf(GodPropType),
     isLoading: PropTypes.bool.isRequired

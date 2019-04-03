@@ -17,8 +17,16 @@ import GodPropType from '../utils/GodPropType';
 function CompareGodsDetail(props) {
     const { nameGreek, nameRoman, godsMap, isLoading } = props;
 
-    if (! isLoading && godsMap && (! godsMap.hasOwnProperty(nameGreek) || ! godsMap.hasOwnProperty(nameRoman))) {
-        return <NotFound />;
+    if (! isLoading && godsMap) {
+        if (! godsMap.hasOwnProperty(nameGreek) || ! godsMap.hasOwnProperty(nameRoman)) {
+            return <NotFound />;
+        }
+        if (godsMap[nameGreek].type !== 'greek' || godsMap[nameRoman].type !== 'roman') {
+            return <NotFound />;
+        }
+        if (godsMap[nameGreek].counterpart !== godsMap[nameRoman].id) {
+            return <NotFound />;
+        }
     }
 
     const greekGod = godsMap ? godsMap[nameGreek] : undefined;
