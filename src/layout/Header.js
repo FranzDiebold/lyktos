@@ -31,6 +31,7 @@ function Header(props) {
                     type="text"
                     value={filterText}
                     onChange={changeFilterText}
+                    size={12}
                     placeholder="Search gods..."
                 />
                 <span className="icon is-left">
