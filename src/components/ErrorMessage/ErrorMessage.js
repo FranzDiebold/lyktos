@@ -21,7 +21,7 @@ function ErrorMessage(props) {
     }
 
     return (
-        <Message isColor="warning">
+        <Message isColor="danger">
             <MessageHeader>
                 <p>Error</p>
             </MessageHeader>

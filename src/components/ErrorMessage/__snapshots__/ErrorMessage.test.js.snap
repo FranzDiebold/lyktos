@@ -2,7 +2,7 @@
 
 exports[`renders error message correctly 1`] = `
 <article
-  className="message is-warning"
+  className="message is-danger"
 >
   <div
     className="message-header"
