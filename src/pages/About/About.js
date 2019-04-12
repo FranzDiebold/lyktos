@@ -115,6 +115,29 @@ function About() {
                     </Container>
                 </HeroBody>
             </Hero>
+            <Hero className="has-white-bg" isSize="medium">
+                <HeroBody>
+                    <Container className="has-text-centered">
+                        <Title><span role="img" aria-label="speech bubble">💬</span> <i>"Alexa, open <span className="has-text-primary">mythology land</span>"</i></Title>
+                        <Columns isVCentered>
+                            <Column isSize={4}>
+                                <Columns isCentered>
+                                    <Column isSize="narrow">
+                                        <Image isSize="128x128" src={`/img/mythology-land-alexa-skill-preview-image.png`} />
+                                    </Column>
+                                </Columns>
+                            </Column>
+                            <Column isSize={8}>
+                                <Content>
+                                    <p className="has-text-justified">
+                                        Also checkout the corresponding <b>Alexa skill</b> "mythology land", which is also <a href="https://github.com/FranzDiebold/mythology-land-alexa-skill" target="_blank" rel="noopener noreferrer">open source</a>!
+                                    </p>
+                                </Content>
+                            </Column>
+                        </Columns>
+                    </Container>
+                </HeroBody>
+            </Hero>
         </div>
     );
 }

@@ -291,5 +291,85 @@ exports[`renders about page correctly 1`] = `
       </div>
     </div>
   </section>
+  <section
+    className="hero is-medium has-white-bg"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container has-text-centered"
+      >
+        <h1
+          className="title"
+        >
+          <span
+            aria-label="speech bubble"
+            role="img"
+          >
+            💬
+          </span>
+           
+          <i>
+            "Alexa, open 
+            <span
+              className="has-text-primary"
+            >
+              mythology land
+            </span>
+            "
+          </i>
+        </h1>
+        <div
+          className="columns is-vcentered"
+        >
+          <div
+            className="column is-4"
+          >
+            <div
+              className="columns is-centered"
+            >
+              <div
+                className="column is-narrow"
+              >
+                <figure
+                  className="image is-128x128"
+                >
+                  <img
+                    src="/img/mythology-land-alexa-skill-preview-image.png"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div
+            className="column is-8"
+          >
+            <div
+              className="content"
+            >
+              <p
+                className="has-text-justified"
+              >
+                Also checkout the corresponding 
+                <b>
+                  Alexa skill
+                </b>
+                 "mythology land", which is also 
+                <a
+                  href="https://github.com/FranzDiebold/mythology-land-alexa-skill"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  open source
+                </a>
+                !
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 `;
