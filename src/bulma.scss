@@ -35,6 +35,8 @@ $danger: $danger-color;
 @import "~bulma/sass/layout/hero.sass";
 @import "~bulma/sass/layout/section.sass";
 
+@import "~bulma-tooltip/src/sass/index.sass";
+
 // fix columns to wide on mobile (https://github.com/jgthms/bulma/issues/449)
 @media screen and (max-width: 1024px) {
     footer.footer {
