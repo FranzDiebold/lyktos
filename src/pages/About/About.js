@@ -130,7 +130,7 @@ function About() {
                             <Column isSize={8}>
                                 <Content>
                                     <p className="has-text-justified">
-                                        Also checkout the corresponding <b>Alexa skill</b> "mythology land", which is also <a href="https://github.com/FranzDiebold/mythology-land-alexa-skill" target="_blank" rel="noopener noreferrer">open source</a>!
+                                        Also check out the corresponding <b>Alexa skill</b> "mythology land", which is also <a href="https://github.com/FranzDiebold/mythology-land-alexa-skill" target="_blank" rel="noopener noreferrer">open source</a>!
                                     </p>
                                 </Content>
                             </Column>

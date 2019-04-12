@@ -35,7 +35,7 @@ According to Hesiod, Theogony (477-484), Rhea gave birth to Zeus in Lyctus and h
 
 
 ## "Alexa, open mythology land"
-Also checkout the corresponding **Alexa skill** "mythology land", which is also [open source](https://github.com/FranzDiebold/mythology-land-alexa-skill)!
+Also check out the corresponding **Alexa skill** "mythology land", which is also [open source](https://github.com/FranzDiebold/mythology-land-alexa-skill)!
 
 
 ## Technical
