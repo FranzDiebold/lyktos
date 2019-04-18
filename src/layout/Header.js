@@ -89,7 +89,7 @@ function Header(props) {
                         <NavLink className="navbar-item" to="/compare/greek" activeClassName="is-active">Greek</NavLink>
                         <NavLink className="navbar-item" to="/compare/roman" activeClassName="is-active">Roman</NavLink>
                         <NavLink className="navbar-item" to="/about" activeClassName="is-active">{aboutIcon}</NavLink>
-                        <NavbarItem href="https://www.amazon.com/alexa-skills/b/?node=13727921011" target="_blank" className="tooltip is-tooltip-bottom" data-tooltip="'Alexa, open mythology land'">{alexaIcon}</NavbarItem>
+                        <NavbarItem href="https://www.amazon.com/Franz-Diebold-mythology-land/dp/B07QRGT3Q8" target="_blank" className="tooltip is-tooltip-bottom" data-tooltip="'Alexa, open mythology land'">{alexaIcon}</NavbarItem>
                         <NavbarItem href="https://github.com/FranzDiebold/lyktos" target="_blank">{githubIcon}</NavbarItem>
                     </NavbarEnd>
                 </NavbarMenu>
