@@ -38,6 +38,10 @@ According to Hesiod, Theogony (477-484), Rhea gave birth to Zeus in Lyctus and h
 Also check out the corresponding **Alexa skill** "mythology land", which is also [open source](https://github.com/FranzDiebold/mythology-land-alexa-skill)!
 
 
+## Deployment
+The app is automatically deployed to GitHub Pages using [Travis CI](https://travis-ci.org/), see [.travis.yml](.travis.yml).
+
+
 ## Technical
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -65,6 +69,5 @@ Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
