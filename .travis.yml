@@ -1,5 +1,7 @@
 language: node_js
 
+os: linux
+
 node_js:
   - "stable"
 
@@ -14,8 +16,8 @@ script:
 
 deploy:
   provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
+  cleanup: false
+  token: $GITHUB_TOKEN
   local_dir: build
   on:
     branch: master
