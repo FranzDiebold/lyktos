@@ -14,7 +14,7 @@ function Footer() {
                 <Columns>
                     <Column>
                         <small>
-                            made with <span role="img" aria-label="heart">❤️</span> by <a href="https://www.franzdiebold.ml" target="_blank" rel="noopener noreferrer">Franz Diebold</a>
+                            made with <span role="img" aria-label="heart">❤️</span> by <a href="https://github.com/FranzDiebold" target="_blank" rel="noopener noreferrer">Franz Diebold</a>
                         </small>
                     </Column>
                     <Column className="has-text-right">
