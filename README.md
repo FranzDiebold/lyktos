@@ -39,7 +39,7 @@ Also check out the corresponding **Alexa skill** "mythology land", which is also
 
 
 ## Deployment
-The app is automatically deployed to GitHub Pages using [Travis CI](https://travis-ci.org/), see [.travis.yml](.travis.yml).
+The app is automatically deployed to GitHub Pages using [Travis CI](https://travis-ci.com), see [.travis.yml](.travis.yml).
 
 
 ## Technical
