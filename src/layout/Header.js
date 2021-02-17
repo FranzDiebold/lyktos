@@ -24,22 +24,22 @@ function Header(props) {
     );
 
     const filter = showFilter(props.location.pathname) ?
-    (
-        <NavbarItem>
-            <Control hasIcons>
-                <Input
-                    type="text"
-                    value={filterText}
-                    onChange={changeFilterText}
-                    size={12}
-                    placeholder="Search gods..."
-                />
-                <span className="icon is-left">
-                    {searchIcon}
-                </span>
-            </Control>
-        </NavbarItem>
-    ) : '';
+        (
+            <NavbarItem>
+                <Control hasIcons>
+                    <Input
+                        type="text"
+                        value={filterText}
+                        onChange={changeFilterText}
+                        size={12}
+                        placeholder="Search gods..."
+                    />
+                    <span className="icon is-left">
+                        {searchIcon}
+                    </span>
+                </Control>
+            </NavbarItem>
+        ) : '';
 
     const aboutIcon = (
         <span className="icon">
