@@ -85,10 +85,10 @@ function Header(props) {
                 </NavbarBrand>
                 <NavbarMenu isActive={mobileMenuOpen} onClick={toggleMobileMenu}>
                     <NavbarEnd>
-                        <NavLink className="navbar-item" to="/compare" activeClassName="is-active">Compare</NavLink>
-                        <NavLink className="navbar-item" to="/compare/greek" activeClassName="is-active">Greek</NavLink>
-                        <NavLink className="navbar-item" to="/compare/roman" activeClassName="is-active">Roman</NavLink>
-                        <NavLink className="navbar-item" to="/about" activeClassName="is-active">{aboutIcon}</NavLink>
+                        <NavLink className="navbar-item" to="/compare" exact activeClassName="is-active">Compare</NavLink>
+                        <NavLink className="navbar-item" to="/compare/greek" exact activeClassName="is-active">Greek</NavLink>
+                        <NavLink className="navbar-item" to="/compare/roman" exact activeClassName="is-active">Roman</NavLink>
+                        <NavLink className="navbar-item" to="/about" exact activeClassName="is-active">{aboutIcon}</NavLink>
                         <NavbarItem href="https://mythology-land.diebold.io" target="_blank" className="has-tooltip-bottom" data-tooltip="'Alexa, open mythology land'">{alexaIcon}</NavbarItem>
                         <NavbarItem href="https://github.com/FranzDiebold/lyktos" target="_blank">{githubIcon}</NavbarItem>
                     </NavbarEnd>
