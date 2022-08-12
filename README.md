@@ -1,46 +1,48 @@
 ![lyktos gods](./images/gods.png "lyktos gods")
 
 # :trident: lyktos
+
 ## Compare greek and roman gods and goddesses.
 
-[![React: v16.13](https://img.shields.io/badge/React-v16.13-61DAFB.svg)](./package.json)
+[![React: v16.14](https://img.shields.io/badge/React-v16.14-61DAFB.svg)](./package.json)
 <a href="https://www.lyktos.ml" target="_blank"><img src="https://img.shields.io/badge/demo-online-009df4.svg" alt="demo: online"></a>
-[![Build Status](https://travis-ci.com/FranzDiebold/lyktos.svg?branch=master)](https://travis-ci.com/FranzDiebold/lyktos)
+
 [![license: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](./LICENSE.md)
 
 ## Project background
+
 What should you do if you both want to learn [React](https://reactjs.org) and get to know [greek](https://en.wikipedia.org/wiki/Greek_mythology) and [roman](https://en.wikipedia.org/wiki/Roman_mythology) mythology?
 
 You create :trident: lyktos!
 
 ### React features/packages used
+
 - [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 - [React Router](https://github.com/ReactTraining/react-router)
 - [React Helmet](https://github.com/nfl/react-helmet)
 - [Bloomer](https://github.com/AlgusDark/bloomer)
 - [Jest Snapshot Testing](https://jestjs.io/docs/en/snapshot-testing)
 
-
 ## Etymology
+
 Lyktos, Lyctus or Lyttos (Greek: Λύκτος or Λύττος), was one of the most considerable cities in ancient Crete, which appears in the Homeric catalogue. Lyttos is now a village in the municipality of Minoa Pediada.
 
 According to Hesiod, Theogony (477-484), Rhea gave birth to Zeus in Lyctus and hid him in a cave of Mount Aegaeon. The inhabitants of this ancient Doric city called themselves colonists of Sparta, and the worship of Apollo appears to have prevailed there.
 
-
 ## Thank you!
+
 - All information is taken from [Wikipedia](https://www.wikipedia.org)
 - Gods [Vector Illustration by www.Vecteezy.com](https://www.vecteezy.com/)
 - Heaven background [Designed by macrovector / Freepik](http://www.freepik.com)
 - Made with [Bulma](https://github.com/jgthms/bulma)
 
-
 ## "Alexa, open mythology land"
+
 Also check out the corresponding **Alexa skill** "mythology land", which is also [open source](https://github.com/FranzDiebold/mythology-land-alexa-skill)!
 
-
 ## Deployment
-The app is automatically deployed to GitHub Pages using [Travis CI](https://travis-ci.com), see [.travis.yml](.travis.yml).
 
+The app is automatically deployed to GitHub Pages using [GitHub Actions](https://github.com/features/actions), see [.github/workflows/ci.yml](.github/workflows/ci.yml).
 
 ## Technical
 
