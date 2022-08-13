@@ -6,7 +6,7 @@
 
 [![React: v16.14](https://img.shields.io/badge/React-v16.14-61DAFB.svg)](./package.json)
 <a href="https://www.lyktos.ml" target="_blank"><img src="https://img.shields.io/badge/demo-online-009df4.svg" alt="demo: online"></a>
-
+[![Build and Deploy](https://github.com/FranzDiebold/lyktos/actions/workflows/ci.yml/badge.svg)](https://github.com/FranzDiebold/lyktos/actions/workflows/ci.yml)
 [![license: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](./LICENSE.md)
 
 ## Project background
