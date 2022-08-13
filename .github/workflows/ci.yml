@@ -16,5 +16,24 @@ jobs:
       - name: Set environment variables
         uses: FranzDiebold/github-env-vars-action@v2
 
-      - run: echo {{ github.ref }}
-      - run: echo ${{ env.CI_REF_NAME }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+
+      - name: Install
+        run: npm install
+
+      - name: Test
+        run: |
+          npm test
+          npm run test:coverage
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy 🚀
+        if: github.ref == env.CI_REF
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
